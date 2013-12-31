@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
-
-import { Button, Col, Divider, Form, Input, Row } from "antd";
-// import { MailOutlined, LockOutlined } from "@ant-design/icons";
+import React, { useState, memo } from "react";
+//Antd imports
+import {
+  Button,
+  Col,
+  Divider,
+  Form,
+  Input,
+  Row,
+  Typography,
+  Space,
+  Avatar,
+} from "antd";
+//Icons import
 import { HiOutlineLockClosed, HiOutlineEnvelope } from "react-icons/hi2";
 import { FcGoogle } from "react-icons/fc";
 import { FaLinkedin } from "react-icons/fa6";
-
-// import Button from "../../shared/Form/Button";
+//stylesheet import
 import styles from "../../../styles/components/Layout/Auth/auth.module.scss";
-// import { UserLoginAuth } from "@/src/utils/api/auth";
 
-// import { useDispatch } from "react-redux";
-// import { loginSuccess } from "../../../redux/userActions/userActions";
-import { Typography } from "antd";
-import { Avatar, Space } from "antd";
 const { Title } = Typography;
 
 const Login = () => {
@@ -22,30 +26,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
 
-  //   const dispatch = useDispatch()
-
-  //   const OnSubmitAuth=async(state)=>{
-  //     e.preventDefault()
-  //     const userAuthResponse =await UserLoginAuth(state)
-  //     if (userAuthResponse?.error==null) {
-  //       console.log(userAuthResponse)
-  //       setLoading(false);
-  //       const jwtToken = userAuthResponse?.token
-  //       console.log(jwtToken)
-  //       const token: any = jwt_decode(jwtToken);
-  //       Cookies.set("_hjSession", jwtToken, { expires: 1 });
-  //       Cookies.set('_user',JSON.stringify(userAuthResponse?.payload), { expires: 1 })
-  //       dispatch(loginSuccess(token, token.type));
-  //       Router.push("/");
-
-  //     }
-  //      if (userAuthResponse?.error != null) {
-  //       setLoading(false);
-  //       setMessage("Invalid email or password!");
-  //     }
-  //   }
-  //   console.log(message)
-  // onSubmit={(e:any)=>{OnSubmitAuth(state, e)}}
   return (
     <Row className={styles.auth_LoginContainer} justify={"center"}>
       <Col span={15} className={styles.auth_ContainerCol}>
@@ -111,16 +91,16 @@ const Login = () => {
           <Title className={styles.auth_ColHeading}>Get More Leads!</Title>
           <Space>
             <Typography className={styles.auth_Punchline}>
-            Join now! Grow your business and deliver premium quality work
+              Join now! Grow your business and deliver premium quality work
             </Typography>
           </Space>
           <Button className={styles.auth_RegisterButton} size="large">
-              Sign Up
-            </Button>
+            Sign Up
+          </Button>
         </div>
       </Col>
     </Row>
   );
 };
 
-export default Login;
+export default memo(Login);

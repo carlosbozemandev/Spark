@@ -2,19 +2,12 @@ $gradient-start: rgb(173, 229, 255); // Lighter shade of orange
 $gradient-end: rgb(24, 115, 143); // Darker shade of orange
 
 .auth {
+  height: 100% !important;
   &_LoginContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    // background: radial-gradient(
-    //   circle,
-    //   $gradient-start 0%,
-    //   $gradient-end 100%,
-    //   $gradient-end 100%
-    // );
-    // background-repeat: no-repeat;
-    // background-size: cover;
     margin: 0; /* Remove default margin to cover the entire viewport */
     padding: 0; /* Remove default padding to cover the entire viewport */
 
@@ -36,17 +29,15 @@ $gradient-end: rgb(24, 115, 143); // Darker shade of orange
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
-    height: 95vh !important;
+    height: 100vh !important;
     background: radial-gradient(
       circle,
       $gradient-start 0%,
       $gradient-end 100%,
       $gradient-end 100%
     );
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
   }
-  // ==============LOGIN============
+  // **************LOGIN**************
   &_LoginCard {
     margin: auto !important;
     margin-top: 25px !important;
@@ -113,8 +104,8 @@ $gradient-end: rgb(24, 115, 143); // Darker shade of orange
     margin-top: 4rem;
     border-radius: 8px !important;
     width: 40%;
-    background-color: transparent  !important;
-    color: white!important;
+    background-color: transparent !important;
+    color: white !important;
     border: solid 1px white !important;
     padding: 5px 20px !important;
 
@@ -139,7 +130,7 @@ $gradient-end: rgb(24, 115, 143); // Darker shade of orange
   &_LoginButton {
     margin-bottom: 1rem;
     border-radius: 8px !important;
-    width: 40%;
+    width: 70%;
     background-color: rgb(24, 115, 143) !important;
     color: white !important;
     border: none !important;
@@ -157,7 +148,7 @@ $gradient-end: rgb(24, 115, 143); // Darker shade of orange
   &_LoginFormBottomLine {
     font-size: 14px;
     font-weight: 600;
-    justify-content: end !important;
+    justify-content: flex-end !important;
     display: flex;
     width: 90%;
     @media (max-width: 768px) {
@@ -170,22 +161,8 @@ $gradient-end: rgb(24, 115, 143); // Darker shade of orange
     color: rgb(31, 30, 30) !important;
     font-size: 14px !important;
   }
-  // &_LoginContainer{
-  //     display: flex !important;
-  //     flex: 1 !important;
-  //     margin: auto;
-  //     justify-content: center;
-  //     align-items: center !important;
-  //     min-height: 100vh;
-  //     background-color: white;
-  //     padding: 16px !important;
-  //     padding-top: 25px !important;
-  //     background-repeat: no-repeat;
-  //     background-size: cover !important;
-  //     background: radial-gradient(circle, $gradient-start 0%, $gradient-end 100%, $gradient-end 100%);
-  // }
 
-  // ==============SIGNUP============
+  // **************SIGNUP**************
 
   &_SignUpCard {
     margin: auto;
