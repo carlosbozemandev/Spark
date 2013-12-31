@@ -1,0 +1,226 @@
+$gradient-start: rgb(173, 229, 255); // Lighter shade of orange
+$gradient-end: rgb(24, 115, 143); // Darker shade of orange
+
+.auth {
+  &_LoginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // background: radial-gradient(
+    //   circle,
+    //   $gradient-start 0%,
+    //   $gradient-end 100%,
+    //   $gradient-end 100%
+    // );
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    margin: 0; /* Remove default margin to cover the entire viewport */
+    padding: 0; /* Remove default padding to cover the entire viewport */
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding-top: 50px !important;
+    }
+  }
+
+  &_ContainerCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+  }
+  &_ContainerSecondCol {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    height: 95vh !important;
+    background: radial-gradient(
+      circle,
+      $gradient-start 0%,
+      $gradient-end 100%,
+      $gradient-end 100%
+    );
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  // ==============LOGIN============
+  &_LoginCard {
+    margin: auto !important;
+    margin-top: 25px !important;
+    min-width: 50vh !important;
+    display: flex !important;
+    flex: 1 !important;
+    justify-content: center;
+    align-items: center !important;
+    border-radius: 15px;
+    // background-color: white !important;
+    // box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      width: 90%;
+      min-width: auto;
+      margin-top: 20px;
+    }
+    @media (max-width: 416px) {
+      width: 90%;
+      min-width: 40vh;
+      margin-top: 20px;
+    }
+    @media (max-width: 375px) {
+      width: 90%;
+      min-width: 48vh;
+      min-height: 58vh;
+      margin-top: 20px;
+    }
+  }
+
+  &_LoginForm {
+    padding: 0;
+    min-width: 30vh;
+    align-items: center !important;
+    align-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    @media (max-width: 768px) {
+      width: 90%;
+      min-width: auto;
+      margin: 0 auto;
+    }
+  }
+
+  &_ColHeading {
+    font-weight: 700 !important;
+    color: white !important;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+  &_Punchline {
+    font-weight: 600 !important;
+    color: white !important;
+    font-size: 22px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+  &_RegisterButton {
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+    border-radius: 8px !important;
+    width: 40%;
+    background-color: transparent  !important;
+    color: white!important;
+    border: solid 1px white !important;
+    padding: 5px 20px !important;
+
+    &:hover {
+      font-weight: 600 !important;
+    }
+  }
+  &_LoginHeading {
+    font-weight: 700 !important;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &_LoginInputs {
+    margin-top: 1rem;
+    border-radius: 8px !important;
+    width: 90% !important;
+  }
+
+  &_LoginButton {
+    margin-bottom: 1rem;
+    border-radius: 8px !important;
+    width: 40%;
+    background-color: rgb(24, 115, 143) !important;
+    color: white !important;
+    border: none !important;
+    padding: 5px 20px !important;
+
+    &:hover {
+      font-weight: 600 !important;
+    }
+  }
+
+  &_LoginFormGroup {
+    margin-bottom: 1rem;
+  }
+
+  &_LoginFormBottomLine {
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: end !important;
+    display: flex;
+    width: 90%;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  &_BottomText {
+    margin-top: 100px;
+    color: rgb(31, 30, 30) !important;
+    font-size: 14px !important;
+  }
+  // &_LoginContainer{
+  //     display: flex !important;
+  //     flex: 1 !important;
+  //     margin: auto;
+  //     justify-content: center;
+  //     align-items: center !important;
+  //     min-height: 100vh;
+  //     background-color: white;
+  //     padding: 16px !important;
+  //     padding-top: 25px !important;
+  //     background-repeat: no-repeat;
+  //     background-size: cover !important;
+  //     background: radial-gradient(circle, $gradient-start 0%, $gradient-end 100%, $gradient-end 100%);
+  // }
+
+  // ==============SIGNUP============
+
+  &_SignUpCard {
+    margin: auto;
+    min-width: 50vh;
+    display: flex !important;
+    flex: 1 !important;
+    justify-content: center;
+    align-items: center !important;
+    min-height: 63vh;
+    border-radius: 15px;
+    background-color: white !important;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      width: 90%;
+      min-width: auto;
+      margin-top: 20px;
+    }
+    @media (max-width: 425px) {
+      width: 90%;
+      min-width: 40vh;
+      min-height: 68vh;
+      margin-top: 20px;
+    }
+    @media (max-width: 320px) {
+      width: 90%;
+      min-height: 88vh;
+      min-width: 48vh;
+      margin-top: 20px;
+    }
+    @media (max-width: 375px) {
+      width: 90%;
+      min-height: 88vh;
+      min-width: 48vh;
+      margin-top: 20px;
+    }
+  }
+}
